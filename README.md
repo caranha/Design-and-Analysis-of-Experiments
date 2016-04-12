@@ -1,21 +1,31 @@
-## Lecture Notes on Design and Analysis of Experiments  
-### **Prof. Felipe Campelo, Ph.D.**  
+## Lecture Notes for Experiment Design in Computer Sciences (01CH740)
+### Tsukuba Fork -- Claus Aranha
 
-Here are my Lecture Notes on Design & Analysis of Experiments, originally developed for the course I offer twice a year in [UFMG](http://www.ufmg.br)'s [Graduate Program in Electrical Engineering](http://ppgee.ufmg.br/index.php). I hope they might prove useful elsewhere.
+Here are the materials used for the lecture "Experiment Design in Computer Sciences", offered 
+every spring semester in the Computer Science English Program at the University of Tsukuba.
 
-I am releasing these lecture notes under a [Creative Commons BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) license, which I believe is pretty open. If you want to use or modify this material, please do me a favor and cite the original source. I would also greatly appreciate if you let me know that you're using it - I take a small pride on these things. ;-)  
+This is a derivative work from the "Lecture Notes on Design & Analysis of Experiments", by Professor
+Felipe Campelo of UFMG. See below for more details.
 
-As far as I am aware, these notes are also being used (in full, in part, or adapted) by:
+This repository may be of use for students who wish to prepare in Advance, but be aware that some 
+of the materials here may still suffer some modifications before being used in class. Make sure 
+to always check the [[MANABA page for the course](https://manaba.tsukuba.ac.jp/ct/course_578828)] for
+the latest version of any material.
 
-- [Prof. Claus Aranha, Tsukuba University, Japan](https://github.com/caranha/ExperimentDesignLectureNotes)
-- [Prof. Vicente Machado Neto, Universidade Tecnológica Federal do Paraná, Brazil](http://www.energiapura.net.br/alunos/planejamento_experimentos/Aulas_PAE/)
-- [Prof. Elizabeth F. Wanner, CEFET-MG, Brazil](http://lattes.cnpq.br/2243256075052322)
+See the TSUKUBA directory for important information regarding the differences of the DoE course in 
+UFMG and the EDCS course in Tsukuba.
+
+*****
+
+## Original Work and License
+
+This repository is a fork from the original work by [[Felipe Campelo](https://github.com/caranha/Design-and-Analysis-of-Experiments/)]. It is released under a [Creative Commons BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). I encourage people interested in this work to fork/use the original repository.
 
 The lectures are fully developed in Beamer, with R as the statistical software of choice. All example files and datasets will also be made available here.
 
-*****
-### Citation Info
-If you're using these notes in any way, please let them know your source:
+## Citation Info
+
+You can refer to the original source of this work as follows:
 
 Felipe Campelo (2015), _Lecture Notes on Design and Analysis of Experiments_. Online: [http://git.io/v3Kh8](http://git.io/v3Kh8) Version 2.11; Creative Commons BY-NC-SA 4.0.
 
@@ -26,8 +36,3 @@ Felipe Campelo (2015), _Lecture Notes on Design and Analysis of Experiments_. On
     year={2015},
     note={Version 2.11; Creative Commons BY-NC-SA 4.0.}}
 
-Cheers,  
-Felipe Campelo  
-fcampelo@gmail.com
-
-------
