@@ -10,7 +10,6 @@ Notes for myself to change and improve the repository
 # Tasks:
 
 ## Class Preparation
-- C.P.F. Chapter 00
 - C.P.F. Chapter 01
 - C.P.F. Chapter 02
 - C.P.F. Chapter 03
@@ -47,3 +46,5 @@ Solve conflicts and push the result
 # Done stuff
 - Modify the README to reflect the derivative work nature
 - Add a TSUKUBA directory with information specific to the Tsukuba course
+- C.P.F. Chapter 00
+
