@@ -10,8 +10,7 @@ Notes for myself to change and improve the repository
 # Tasks:
 
 ## Class Preparation
-- C.P.F. Chapter 01
-- C.P.F. Chapter 02
+- C.P.F. Chapter 02 (Add explanation of Individual and Group Report here)
 - C.P.F. Chapter 03
 - C.P.F. Chapter 04
 - C.P.F. Chapter 05
@@ -37,9 +36,7 @@ Notes for myself to change and improve the repository
 1. Save newest upstream to upstream/master branch: git fetch upstream
 2. Change to master branch: git checkout master
 3. Merge upstream/master branch into local master: git merge upstream/master
-
-Solve conflicts and push the result
-- Idea: create a branch for solving merge conflicts before merging into master? 
+4. Solve conflicts and push the result
 
 *****
 
@@ -47,4 +44,5 @@ Solve conflicts and push the result
 - Modify the README to reflect the derivative work nature
 - Add a TSUKUBA directory with information specific to the Tsukuba course
 - C.P.F. Chapter 00
+- C.P.F. Chapter 01
 
