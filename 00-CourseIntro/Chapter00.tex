@@ -4,11 +4,11 @@
 \input{../defs/preamble.tex}
 
 % Specific definitions
-\title[]{Design and Analysis of Experiments}
+\title[]{Experiment Design for Computer Sciences}
 \subtitle[]{00 - Course Intro}
-\author[]{Felipe Campelo\\{\footnotesize http://www.cpdee.ufmg.br/\textasciitilde fcampelo}}
-\institute{Graduate Program in Electrical Engineering}
-\date{\scriptsize Belo Horizonte\\March 2016}
+\author[]{Claus Aranha\\{\footnotesize \url{http://conclave.cs.tsukuba.ac.jp/}}}
+\institute{Computer Science Department}
+\date{\scriptsize Tsukuba, 2016}
 
 \begin{document}
 
@@ -16,11 +16,11 @@
 \setbeamertemplate{footline}{}
 \begin{frame}
 \begin{flushright}
-\includegraphics[width=.25\textwidth]{../figs/principal_completa3_ufmg}
+%\includegraphics[width=.25\textwidth]{../figs/principal_completa3_ufmg}
 \end{flushright}
   \titlepage
   \begin{tikzpicture}[remember picture,overlay]
-  \node[anchor=south east,xshift=-5pt,yshift=122pt] at (current page.south east) {\tiny Version 2.11.2016a};
+  \node[anchor=south east,xshift=-5pt,yshift=122pt] at (current page.south east) {\tiny Version 2.11.T};
   \node[anchor=south west,yshift=0pt] at (current page.south west) {\includegraphics[width=.15\textwidth]{../figs/by-nc-sa.png}};
   \end{tikzpicture}  
 \end{frame}
@@ -59,10 +59,13 @@
 \begin{ftst}
 {Course Overview}
 {Course Structure}
-\bitems Lectures (10 weeks): discussions about several aspects and techniques for design and analyses of experiments. Theory, application examples and \textit{computational case studies}; 
-\spitem Final project presentations (2 weeks);
-\spitem Written exam (1 week);
-\spitem Tutoring (2 weeks);
+
+\bitems Lectures (10 weeks): discussions about several aspects and
+techniques for design and analyses of experiments. Theory, application
+examples and \textit{computational case studies};
+\spitem One Team Project/Presentation;
+\spitem One Individual Report;
+\spitem One Case Study;
 \eitem
 \end{ftst}
 
@@ -77,9 +80,9 @@
 		\begin{tabular}{cccc} \hline
 			\textbf{Item}	& \textbf{Type}	&Value\\
 			\hline
-			Case studies		& Classroom activity		&40\\
-			Written exam		& Written exam	&30\\
-			Final Project		& Report and presentation		&30\\
+			Case studies		& Individual Report &40\\
+			Research Report		& Individual Report &30\\
+			Research Project	& Report and presentation &30\\
 			\hline
 		\end{tabular}
 	\end{center}
@@ -87,8 +90,9 @@
 
 \begin{block}{Other relevant Information}
 	\bitems Lectures slides, example R files, data, etc. available at \\
-	{\small \url{http://git.io/v3Kh8}}
-	\spitem Office hours: Mon (10:00h - 11:30h); Wed (10:00 - 11:30)
+	{\small \url{https://git.io/vVpvC/}}
+	\spitem MANABA site for submitting reports and questions.\\ 
+        Code: 5718071
 	\spitem Software/services used: R ({\scriptsize\url{http://cran.r-project.org/}}),\\GitHub ({\scriptsize\url{http://github.com/}}).
 	\eitem
 \end{block}
@@ -101,7 +105,7 @@
 {Course Bibliography}
 \textbf{Main}:\\
 {\footnotesize
-\bitems Felipe Campelo (2015), \textit{Lecture Notes on Design and Analysis of Experiments}. Online: \url{http://git.io/v3Kh8} Version 2.11; Creative Commons BY-NC-SA 4.0.
+\bitems \textit{Lecture Notes on Design and Analysis of Experiments}. Online: \url{http://git.io/vVpvC} \structure{Version 2.11.t}; Creative Commons BY-NC-SA 4.0.
 \item D.C. Montgomery, G.C. Runger (2010), \textit{Applied Statistics and Probability for Engineers}, John Wiley \& Sons.
 \item Michael J. Crawley (2007), \textit{The R Book}, Wiley.
 \eitem}
@@ -120,36 +124,44 @@
 \begin{ftst}
 {Course Overview}
 {Required / Desired background}
-This is a course on \textit{applied} experimental design and analysis. As such, a large portion of the course is dedicated to case studies in which the student will design experiments, collect (simulated) data, perform inference and report his or her analysis.
+This is a course on \textit{applied} experimental design and
+analysis. As such, a large portion of the course is dedicated to case
+studies in which the student will design experiments, collect
+(simulated) data, perform inference and report his or her analysis.
 \vone
-It is \textbf{strongly reccomended} that the student should complete the free online course  \textit{R Programming}\footnote{{\scriptsize\url{https://www.coursera.org/course/rprog}}} \textbf{before the end of the second week} of the semester (except if the student is already fluent with R).
+It is \textbf{strongly reccomended} that the student should complete
+the free online course \textit{R
+  Programming}\footnote{{\scriptsize\url{https://www.coursera.org/course/rprog}}}
+\textbf{before the end of the second week} of the semester (except if
+the student is already fluent with R).
 \vone
-It is also \textbf{strongly reccomended} that the student should complete the free online course  \textit{Reproducible Research}\footnote{{\scriptsize\url{https://www.coursera.org/course/repdata}}} \textbf{before the end of the first month} of the semester (except if the student is already fluent with writing reports using R Markdown).
+It is also \textbf{strongly reccomended} that the student should
+complete the free online course \textit{Reproducible
+  Research}\footnote{{\scriptsize\url{https://www.coursera.org/course/repdata}}}
+\textbf{before the end of the first month} of the semester (except if
+the student is already fluent with writing reports using R Markdown).
 \end{ftst}
 
 %=====
 
 \begin{ftstf}{About this material}{Conditions of use and referencing}
-\centering\footnotesize This work is licensed under the Creative Commons CC BY-NC-SA 4.0 license\\(Attribution Non-Commercial Share Alike International License version 4.0).\\
+
+\centering\footnotesize This work is a derivative work of \\
+\centering\footnotesize Felipe Campelo (2015), \textit{Lecture Notes on Design and Analysis of Experiments}.\\
+Online: {\scriptsize\url{https://github.com/fcampelo/Design-and-Analysis-of-Experiments}}\\
+Version 2.11;
+\vone
+\centering\footnotesize It is licensed under the Creative Commons CC BY-NC-SA 4.0 license\\(Attribution Non-Commercial Share Alike International License version 4.0).\\
 \vhalf
 \url{http://creativecommons.org/licenses/by-nc-sa/4.0/}\\
 \vone
-\footnotesize Please reference this work as:\\
-\footnotesize \flushleft Felipe Campelo (2015), \textit{Lecture Notes on Design and Analysis of Experiments}.\\Online: {\scriptsize\url{https://github.com/fcampelo/Design-and-Analysis-of-Experiments}}\\
-Version 2.11; Creative Commons BY-NC-SA 4.0.\\
-
-\begin{Verbatim}[fontsize=\tiny]
-    @Misc{Campelo2015-00,
-      title={Lecture Notes on Design and Analysis of Experiments},
-      author={Felipe Campelo},
-      howPublished={\url{https://github.com/fcampelo/Design-and-Analysis-of-Experiments}},
-      year={2015},
-      note={Version 2.11; Creative Commons BY-NC-SA 4.0.},
-    }
-\end{Verbatim}
+\footnotesize I'd prefer if you referenced the original work above, but this work can be referenced as:\\
+\footnotesize \flushleft Claus Aranha (2016), \textit{Lecture Notes on Experiment Design for Computer Sciences}.\\
+Online: {\scriptsize\url{https://github.com/caranha/Design-and-Analysis-of-Experiments}}\\
+Version 2.11.t; Creative Commons BY-NC-SA 4.0.\\
 
 \begin{tikzpicture} [remember picture,overlay]
-\node[anchor=south,yshift=0pt] at (current page.south){ \includegraphics[width=.2\textwidth]{../figs/CCSomerights.png}};
+\node[anchor=south,yshift=0pt] at (current page.south){ \includegraphics[width=.2\textwidth]{../figs/CCsomerights.png}};
 \end{tikzpicture}
 \end{ftstf}
 
@@ -158,9 +170,9 @@ Version 2.11; Creative Commons BY-NC-SA 4.0.\\
 \begin{ftst}{About this material}{Acknowledgments}
 \footnotesize Special thanks to:\\
 \vhalf
-\bitems Prof. Claus Aranha, Ph.D. from Tsukuba University, for discussions and contributions to this material;
-\spitem Ms. Fernanda Takahashi, M.Sc., for working on the initial English translation of the original slides;
-\spitem Previous students from the Graduate Program in Electrical Engineering (PPGEE/UFMG), in particular Mr. Bernardo Braga, M.Sc. and David Pinto, M.Sc., for pointing out errors and helping me improve these Lecture Notes.
+\bitems Prof. Felipe Campelo, PhD. from UFMG, for organizing the
+original material, and making it available under a Creative Commons
+License
 \eitem
 \end{ftst}
 
