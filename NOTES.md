@@ -24,6 +24,7 @@ Notes for myself to change and improve the repository
 
 ## Other changes
 - Modify the GRADING directory to reflect Tsukuba Grading
+- Chapters 03 onwards could use a "what your learned this chapter" wrap up slide.
 
 
 # Upstream
