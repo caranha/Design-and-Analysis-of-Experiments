@@ -4,7 +4,6 @@
 - (2) Carl Sagan is an awesome man, very appropriate to the chapter of
 "what is science". Talk a bit about him.
 - (3) What is science? -- Ask the class what is science before coming to this slide.
-
 - (5) A very common (and a bit useful) definition of science, but an oversimplification
 - (6) Recommend to read the "understanding science" page (actually already listed in the end)
 
@@ -42,7 +41,7 @@
 - This would be a good time to play the "Natural Rule" game.
 - Maaaybe end class 1 here, depending on time.
 
-## Changes to Chapter 01
-## To add in Chapter 01 Tsukuba
-
-- None yet.
+## Future Changes
+- Add a "summary" to the end of the chapter
+- Students loved the "science game", add the science game to the chapter
+- Add some information about getting scientific news and science communications. (Maybe to Chapter 02) 
