@@ -24,9 +24,10 @@ Notes for myself to change and improve the repository
 
 ## Other changes
 - Modify the GRADING directory to reflect Tsukuba Grading
-- Chapters 03 onwards could use a "what your learned this chapter" wrap up slide.
-
-
+- For each chapter add "In previous chapter"/"What you learned this chapter" opening/wrap up slides
+  - 01,02,03,04,05,06,07,08,09,10,11,12
+- Create a separate directory for "weekly notes" (separation between chapters/weekly notes) (Future)
+  
 # Upstream
 ## Updates to upstream
 -   Reference Material: CEC Workshop PDF
