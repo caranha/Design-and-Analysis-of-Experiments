@@ -10,7 +10,9 @@ Notes for myself to change and improve the repository
 # Tasks:
 
 ## Class Preparation
-- C.P.F. Chapter 02 (Add explanation of Individual and Group Report here)
+- C.P.F. Chapter 02
+  - Prepare tsukuba.pdf based on 02-NOTES.md
+  - Prepare Final Project Description files based on comments on NOTES
 - C.P.F. Chapter 03
 - C.P.F. Chapter 04
 - C.P.F. Chapter 05

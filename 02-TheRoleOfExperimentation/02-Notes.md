@@ -110,7 +110,7 @@ How do you convince another person that your problem is important?
 - Experimentation Strategies:
     Highlight each strategies strong and weak points using real life example
     (Probably examples from my own research for now - For example, earthquake or history macthing)
-    TODO: Tsukuba support slides: data/tables/images from my experiments.
+    TODO: Tsukuba support slides: data/tables/images from my expe  riments.
 
 - Design of experiment:
     To summarize, we can see that there are many choices that have to be made when 
