@@ -2,39 +2,29 @@
 Notes for myself to change and improve the repository
 
 # Class Preparation Framework
-- Create XX-notes.md file with course notes
-- Create XX-Tsukuba.{tex,pdf} file with extra information/thoughts
-  specifically for the course in Tsukuba
-- Send Pull Requests/Issues which could be interesting back to Campelo
+1. The directory TSUKUBA/LectureXX will contain notes and extra materials 
+for each of the 10 week lectures.
+2. If necessary, a XX-Tsukuba.{tex,pdf} file will be created for use in class. 
+If not, the notes will be mentioned orally (and available in the repository).
+3. Send Pull Requests/Issues to Campelo
 
 # Tasks:
-
 ## Class Preparation
-- C.P.F. Chapter 02
-  - Prepare tsukuba.pdf based on 02-NOTES.md
-  - Prepare Final Project Description files based on comments on NOTES
-- C.P.F. Chapter 03
-- C.P.F. Chapter 04
-- C.P.F. Chapter 05
-- C.P.F. Chapter 06
-- C.P.F. Chapter 07
-- C.P.F. Chapter 08
-- C.P.F. Chapter 09
-- C.P.F. Chapter 10
-- C.P.F. Chapter 11
-- C.P.F. Chapter 12
+- Week 4
+- Week 5
+- Week 6
+- Week 7
+- Week 8
+- Week 9
+- Week 10
 
 ## Other changes
-- Modify the GRADING directory to reflect Tsukuba Grading
-- For each chapter add "In previous chapter"/"What you learned this chapter" opening/wrap up slides
-  - 01,02,03,04,05,06,07,08,09,10,11,12
-- Create a separate directory for "weekly notes" (separation between chapters/weekly notes) (Future)
-  
-# Upstream
-## Updates to upstream
--   Reference Material: CEC Workshop PDF
--   Data: Earthquakes, Oil Case Study
+- For each week, add a "In the previous week"/"What you learned this week" notes.
+- Add somewhere notes/extra slides about the "Initial Data Analysis Framework"
+- Add extra material: Earthquakes data, Oil Case Study
+- Add Reference Material: CEC Workshop PDF (confirm copyright status)
 
+# Other nodes
 ## How to Fetch from Upstream
 
 1. Save newest upstream to upstream/master branch: git fetch upstream
@@ -42,11 +32,12 @@ Notes for myself to change and improve the repository
 3. Merge upstream/master branch into local master: git merge upstream/master
 4. Solve conflicts and push the result
 
-*****
+* * * * *
 
 # Done stuff
 - Modify the README to reflect the derivative work nature
 - Add a TSUKUBA directory with information specific to the Tsukuba course
 - C.P.F. Chapter 00
 - C.P.F. Chapter 01
-
+- Class Preparation Week 3
+- Added a "Week" directory, instead of modifying chapters directly
