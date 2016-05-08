@@ -8,6 +8,9 @@ for each of the 10 week lectures.
 If not, the notes will be mentioned orally (and available in the repository).
 3. Send Pull Requests/Issues to Campelo
 
+# After Class notes:
+- Asked to introduce "The Elements of Style" to students
+
 # Tasks:
 ## Class Preparation
 - Week 4
