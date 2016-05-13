@@ -1,0 +1,162 @@
+\documentclass[t]{beamer}
+
+% Load general definitions
+\input{../../defs/notespreamble.tex}
+
+% Specific definitions
+\title[]{Experiment Design for Computer Sciences}
+\subtitle[]{Week 04 -- Inferential Statistics -- Course Notes}
+\author[]{Claus Aranha\\{\footnotesize \url{http://conclave.cs.tsukuba.ac.jp/}}}
+\institute{Computer Science Department}
+\date{2016-05-13 (updated \today)}
+
+\begin{document}
+\section{Outline}
+\subsection{Outline}
+\begin{frame}
+  \maketitle
+\end{frame}
+
+\begin{frame}
+  \frametitle{Course Notes/Warnings}
+
+  \begin{alertblock}{Team Project -- Don't procastinate on your team project!}
+    \begin{itemize}
+      \item I have so far only received 1 team e-mail;
+      \item We are almost at the halfway point of the course! 
+    \end{itemize}
+  \end{alertblock}
+
+  \vfill
+
+  Send me an e-mail (caranha@cs.tsukuba.ac.jp) with the names, student
+  IDs, and mail addresses of your team members.
+
+  \vfill
+
+  If you send me the topic of your project, I would be very happy too.
+\end{frame}
+
+\section{Last Class}
+\subsection{Last Class}
+
+\begin{frame}
+  \frametitle{Review of Last Class}
+
+  \begin{itemize}
+  \item \structure{Concepts of Statistics}
+    \begin{itemize}
+    \item Goats, and why the world sometimes does not follow our intuition
+    \item Difference between \structure{sample} and \structure{population}
+    \item The \structure{Central Limit Theorem}
+    \end{itemize} 
+
+    \vfill
+
+  \item \structure{DAE Chapter 03 -- Point Estimators}
+    \begin{itemize}
+    \item Estimating values for the \structure{population parameters} from the \structure{sample parameters};
+    \item \structure{Bias} and \structure{variance} of estimators;
+    \end{itemize}
+    
+    \vfill
+
+  \item \structure{DAE Chapter 04 -- Interval Estimators}
+    \begin{itemize}
+    \item \structure{Confidence Interval} for a parameter
+    \item How to interpret the Confidence Interval;
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Review of Last Class -- Examples} 
+
+  In Manaba, there was a ``Chapter04.R'' file with example code to
+  calculate Confidence Intervals in R (and plot them).
+
+  \bigskip
+
+  Please take a look at the code and apply the calculations to your
+  own data. (If we have time, we will review the code later today).
+\end{frame}
+
+%% TODO: Add numerical Example from my own research
+
+
+\section{This Class}
+\subsection{Campelo's Lecture Notes}
+
+\begin{frame}
+  \frametitle{This week, on EDCS}
+  
+  \begin{itemize}
+  \item \structure{DAE Chapter 05 -- Inferential Statistics:}\\ 
+    Where we take our concepts of statistical intervals, and use them
+    to extrapolate information about the population;
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Notes on the Lecture Notes 1}
+  {\smaller
+    \begin{itemize}
+    \item Amos Nathan Tversky: Active Cognitive Psychologist on the
+      field of human cognitive bias and handling of Risk. Humas are
+      more irrational than we would feel comfortable with.
+    \item \structure{Descriptive Statistics} vs \structure{inference
+      statistics};
+      \begin{itemize}
+      \item Descriptive: Lets us characterize a population;
+      \item Inference: Lets us make decisions about a population;
+        Requires a \structure{degree of certainty} about
+        characteristics of a population;
+      \item When you are making a claim about research, in many cases
+        you are not making a *description*, you are making a decision
+        to claim something about the data. The decision is:\\
+        Is your claim *safe*?\\
+        Is your claim *supported by the data*?\\
+        How likely is your claim to verify/refute the data?
+      \end{itemize}
+    \end{itemize}
+  }
+\end{frame}
+
+\begin{frame}
+  \frametitle{Notes on the Lecture Notes 1}
+  {\smaller
+    \begin{itemize}
+    \item Hypothesis definition -- Examples
+    \item Karl Popper -- Philosopher on the nature of truth. According
+      to him, truth can only be obtained from
+      observations. \alert{BUT} the way that we obtain truth from
+      observations must be well regulated. (Falsification, Black Swan Fallacy)
+    \item Discussion of how to formulate scientific hypothesis;
+    \item Peas Example -- page 9: If mean of the sample is ``much
+      bigger'' or ``much smaller'' than 500, then we refute the Null
+      Hypothesis. But \alert{How Much} is much bigger or much smaller?
+      This is the key question -- anyone has a good answer?
+    \end{itemize}
+  }
+\end{frame}
+
+
+%% TODO: Add comment from campelo Notes
+
+%% TODO: Add some extra
+\section{Extras}
+\subsection{Extras}
+
+\begin{frame}
+  \frametitle{Suggested Reading}
+  \begin{itemize}
+  \item \structure{The Elements of Style(Willian Strunk Jr)} -- Recommended by Marco Antonio\\
+    \url{http://www.amazon.com/Elements-Style-William-Strunk-Jr/dp/1557427283}
+  \item \structure{How to do Good Research and get it Published (Eamonn Keogh)} -- Recommended by Mateus Cruz\\
+    \url{http://www.cs.ucr.edu/~eamonn/Keogh_SIGKDD09_tutorial.pdf}
+  \end{itemize}
+\end{frame}
+
+
+
+\end{document}

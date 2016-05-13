@@ -1,5 +1,5 @@
-
-Notes for myself to change and improve the repository
+TODOs and NOTES (Claus' Version)
+================================
 
 # Class Preparation Framework
 1. The directory TSUKUBA/LectureXX will contain notes and extra materials 
@@ -8,12 +8,8 @@ for each of the 10 week lectures.
 If not, the notes will be mentioned orally (and available in the repository).
 3. Send Pull Requests/Issues to Campelo
 
-# After Class notes:
-- Asked to introduce "The Elements of Style" to students
-
 # Tasks:
 ## Class Preparation
-- Week 4
 - Week 5
 - Week 6
 - Week 7
@@ -35,12 +31,3 @@ If not, the notes will be mentioned orally (and available in the repository).
 3. Merge upstream/master branch into local master: git merge upstream/master
 4. Solve conflicts and push the result
 
-* * * * *
-
-# Done stuff
-- Modify the README to reflect the derivative work nature
-- Add a TSUKUBA directory with information specific to the Tsukuba course
-- C.P.F. Chapter 00
-- C.P.F. Chapter 01
-- Class Preparation Week 3
-- Added a "Week" directory, instead of modifying chapters directly

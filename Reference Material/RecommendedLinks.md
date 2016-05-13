@@ -10,6 +10,13 @@ This books outline many common statistical and methodological errors
 commited by scientists. It is an important guide of what simple mistakes
 to avoid, and a reminder of the importance of rigorous methodology.
 
+### How to do Good Research, get it published in SIGKDD and get it cited!
+Eamonn Keogh, University of California - Riverside  
+- [Presentation](http://www.cs.ucr.edu/~eamonn/Keogh_SIGKDD09_tutorial.pdf)
+
+173 Presentation slides of good advice on how to define your research topic,
+scope, writing, practices. Warnings against common mistakes that young 
+(and not so young) scientists often make.
 
 # Relevant Scientific Articles
 
@@ -29,6 +36,9 @@ with the data, and what sort of conclusions could be drawn from it.
 
 # Scientific Communication and Popularization
 
-
+# Writing
+### The Elements of Style
+Willian Strung Jr.
+- [Amazon Link](http://www.amazon.com/Elements-Style-William-Strunk-Jr/dp/1557427283)
 
 
