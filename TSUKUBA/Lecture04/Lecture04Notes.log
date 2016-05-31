@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.4.4)  13 MAY 2016 11:36
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.4.4)  13 MAY 2016 13:58
 entering extended mode
  %&-line parsing enabled.
 **Lecture04Notes.tex
@@ -1131,9 +1131,9 @@ LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <9> not available
 
 ]
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 158.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 164.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <8> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 158.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 164.
  [8
 
 ]
@@ -1160,7 +1160,7 @@ Here is how much of TeX's memory you used:
 /texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-texli
 ve/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw
 /helvetic/uhvr8a.pfb>
-Output written on Lecture04Notes.pdf (8 pages, 84384 bytes).
+Output written on Lecture04Notes.pdf (8 pages, 84583 bytes).
 PDF statistics:
  239 PDF objects out of 1000 (max. 8388607)
  25 named destinations out of 1000 (max. 500000)
