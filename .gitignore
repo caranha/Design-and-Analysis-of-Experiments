@@ -19,9 +19,4 @@
 # Hide my secret app codes used to generate data for the case studies ;)
 CaseStudyApps/
 
-<<<<<<< HEAD
-# Temp files
-*~
-=======
 .DS_Store
->>>>>>> bbeb818d9450af2adee40a3ae24c489f442f49be
