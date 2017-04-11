@@ -18,6 +18,18 @@ Eamonn Keogh, University of California - Riverside
 scope, writing, practices. Warnings against common mistakes that young 
 (and not so young) scientists often make.
 
+### Reproducibility of research
+- http://www.nature.com/nature/journal/v483/n7391/full/483531a.html
+  In 2012, a medical company tried to reproduce 53 landmark papers
+  in Cancer research. Only 11% of the results were reproducible.
+
+
+- https://osf.io/ezcuj/wiki/home/
+  In 2015, 100 papers in psychological science were reproduced,
+  only 33% of the replications showed the same degree of 
+  significance as the original papers
+
+
 # Relevant Scientific Articles
 
 ## Retrospective/Historical studies
