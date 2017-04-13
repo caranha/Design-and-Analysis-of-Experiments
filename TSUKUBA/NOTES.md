@@ -2,8 +2,6 @@ Things to remember
 ==================
 
 # TODO
-- Review of Campelo's material
-- Schedule for 2017 version of the course (including chapter schedule)
 - W0 Lecture notes
 - Prepary summary of grading rules
 - Add tsukuba reference materials and videos
@@ -25,4 +23,5 @@ Push commits into my forked repository
 - Personal Notes about the chapter 
 - R examples
 - Class-related notes
+
 
