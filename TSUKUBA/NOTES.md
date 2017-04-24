@@ -2,10 +2,8 @@ Things to remember
 ==================
 
 # TODO
-- W0 Lecture notes
-- Prepary summary of grading rules
-- Add tsukuba reference materials and videos
-- Update Manaba
+
+
 
 # Git commands that I always forget
 

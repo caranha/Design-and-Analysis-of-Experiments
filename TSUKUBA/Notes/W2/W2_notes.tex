@@ -1,0 +1,236 @@
+\documentclass[t]{beamer}
+
+\input{../../../defs/preamble.tex}
+\usecolortheme{crane}
+
+\title[]{Experiment Design for Computer Sciences}
+\subtitle[]{Week 2 -- ``The Role of Experimentation'' Notes}
+\author[]{Claus Aranha\\{\footnotesize \url{http://conclave.cs.tsukuba.ac.jp/}}}
+\institute{Computer Science Department}
+\date{\scriptsize Tsukuba, 2017}
+
+\begin{document}
+
+\section{Introduction}
+\subsection{Lecturer}
+% cover page
+\setbeamertemplate{footline}{}
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\section{Lecture Review}
+\subsection{Overview}
+% Main slides
+\begin{ftst}
+  {Lecture Overview}{What did we learn today?}
+
+  Main ``take-aways'' from this lecture:
+
+  \begin{itemize}
+  \item What is a scientific experiment;
+  \item Three types of experiment;
+  \item Fundamental Principles and Concepts of an experiment;
+  \end{itemize}
+\end{ftst}
+
+\subsection{My experiences}
+
+\begin{ftst}
+  {In real life...}{Let me share two experiences}
+  
+  These concepts of experimentalism will follow you through your life
+  as a researcher.
+
+  \vone
+
+  Let us discuss a few recent experiences;
+\end{ftst}
+
+\begin{ftst}
+  {In real life...}{Follow your curiosity}
+
+  Student A was using a fine-tuning tool to select a value for a
+  parameter in one algorithm, before beginning the ``true''
+  experiment.
+
+  \vone
+
+  The tool suggested that the best value would be a very low
+  value. {\bf However} the theory behind the algorithm suggested that
+  high values would be better. This is strange!
+
+  \vone
+
+  First the student checked for bugs in his code first, and then the
+  bibliography. He also learned that a few papers also suggested the low
+  value, but without justification.
+
+  \vone
+
+  Based on these findings, we decided to start a new experiment to
+  understand the influence of this parameter on the data we were
+  studying, and compare that with the usual benchmarks.
+\end{ftst}
+
+\begin{ftst}
+  {In real life...}{Kill your babies}
+
+  Student B developed a new algorithm to solve an optimization
+  problem. He work very hard to find the set of parameters that would
+  result in the best performance for his algorithm.
+
+  \vone
+
+  He compared his result with two older algorithms. He had source code
+  access to those other algorithms, so he ran the programs without
+  changing any parameters.
+
+  \vone
+
+  Unfortunately, one of the parameters that was adjusted was the
+  computational effort of the algorithm. So the proposed algorithm was
+  allowed to spend 100 times more computational effort than the other
+  two algorithms.
+
+  \vone
+
+  You must always make sure that all comparisons in your experiment
+  are fair. This is specially important when setting parameters.
+\end{ftst}
+
+%\begin{ftst}
+%  {In real life...}{Experiment EVERYTHING}
+%  Minecraft Bug Hunting
+%\end{ftst}
+
+
+\section{Report}
+\subsection{Report 1: Mini-Experiment}
+\begin{ftst}
+  {Report 1 -- Mini Experiment}{Outline}
+
+  Based on the discussions of \emph{experimentation} in this lecture,
+  I want you to think and execute a small experiment.
+
+  \vone
+
+  In this exercise:
+  \begin{itemize}
+    \item {\bf I do not require} mathematical/statistical
+      rigour, but
+    \item {\bf I do expect} some creativity and scientific
+      honesty.
+  \end{itemize}
+
+  \vone
+
+  \begin{block}{Example}
+    Juliana and Claus disagree on whether bananas stay ``good'' longer
+    inside or outside a fridge. They decide to settle the discussion
+    with an experiment.
+  \end{block}
+\end{ftst}
+
+\begin{ftst}
+  {Report 1 -- Mini Experiment}
+  {Example}
+
+    \begin{block}{Example}
+      Do bananas stay ``good'' longer inside or outside a fridge?
+  \end{block}
+
+    What do they want to know?
+    
+    \begin{itemize}
+    \item Appearance of the bananas: Color and consistency.
+    \item Quality of the bananas: Taste and texture.
+    \end{itemize}
+
+    How do they do the experiment?
+    \begin{itemize}
+    \item Buy 6 bananas.
+    \item Two of them are put whole in the fridge;
+    \item Two of them are put whole on top of the fridge (covered)
+    \item Two of them are cut in half, and one is on the fridge, one
+      is on top;
+    \end{itemize}
+
+    How is the result evaluated?
+    \begin{itemize}
+    \item Visually inspect the bananas every day for dark spots
+    \item Open the bananas after 7 days.
+    \item If they are not moldy, eat them.
+    \end{itemize}
+\end{ftst}
+
+\begin{ftst}
+  {Report 1 -- Mini Experiment}{Ideas}
+  \begin{block}{}
+    The bananas example is not very rigorous, and could be improved in
+    many ways, but it illustrate one way how experimentation thought
+    (some times called \emph{data-driven}) can be used in our lives)
+  \end{block}
+
+  \vone
+  
+  Other ideas:
+  \begin{itemize}
+  \item Is it faster to use \emph{memset} or \emph{assign} in C++?
+  \item Do you get wetter if you walk or run in the rain?
+  \item Does the ``Dry'' option in the bathroom really works?
+  \item Do you get more ``likes'' on facebook with cat pictures or
+    with memes?
+  \item Do students pick up trash from the street more than
+    non-students?
+  \item etc...
+  \end{itemize}
+\end{ftst}
+
+\begin{ftst}
+  {Report 1 - Mini Experiment}{Report Outline}
+
+  Think, execute and write a report on an experiment on any topic of
+  your interest. The report structure must be (roughly) as follows:
+
+  \vone
+
+  \begin{itemize}
+  \item {\bf The question}: What do you want to learn in your experiment? And why?
+  \item {\bf The alternatives}: What are the possible answers for your
+    question that you can think \emph{before you begin your
+      experiment}?
+  \item {\bf The experiment}: What experiment did you try to do to
+    answer your question? What data would you collect from your experiment?
+  \item {\bf The results}: What were the results of your experiment?
+    What did you learn from it?
+  \end{itemize}
+\end{ftst}
+
+\begin{ftst}
+  {Report 1 - Mini Experiment}{Terms and Conditions}
+
+  \begin{itemize}
+  \item Deadline is May 8th (Monday after Golden Week).
+  \item Submission is through Manaba (See assignments tab).
+  \item Submission must be in PDF format, maximum 2 pages.
+  \item This report is individual.
+  \item This report will be graded on:
+    \begin{itemize}
+    \item How interesting is the question;
+    \item How relevant is the experiment to the question;
+    \item How insightful was the analysis of the result;
+    \item How well written is the report
+    \end{itemize}
+  \item This report will {\bf not} be graded on:
+    \begin{itemize}
+    \item The actual result of the experiment;
+    \item Statistical or mathematical rigour;
+    \item Relevance of the question;
+    \end{itemize}
+  \end{itemize}
+\end{ftst}
+
+\end{document}
+
+
