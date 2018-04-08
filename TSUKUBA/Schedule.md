@@ -5,26 +5,25 @@ Couse Calendar 2017
 
 Room 3BXXXX, Fridays, 15:15 to 16:00
 
-
 # Outline of regular classes
 
-- 04/14: What is science (Ch1)
-- 04/21: The role of Experimentation (Ch2)
-- 04/28: Basic Statistics (Ch3 and Ch4)
-- 05/05: **Golden Week** No class
-- 05/12: Statistical Inference (Ch5)
-- 05/19: Comparisons (Ch6 and Ch7)
-- 05/26: Non Standard situations (Ch8 and Ch9)
-- 06/02: Review and Reinforcement of previous classes
-- 06/09: ANOVA and multiple comparisons (Ch10)
-- 06/16: Choosing Experiments (Ch11 and Ch12)
-- 06/23: Final Review/Substitution Class
-- 06/30: **Final Presentation**
+- 04/13: What is science (Ch1)
+- 04/20: **NO CLASS**
+- 04/27: The role of Experimentation (Ch2)
+- 05/04: **Golden Week** No class
+- 05/11: Basic Statistics (Ch3 and Ch4)
+- 05/18: Statistical Inference (Ch5)
+- 05/25: Comparisons (Ch6 and Ch7)
+- 06/01: Non Standard situations (Ch8 and Ch9)
+- 06/08: ANOVA and multiple comparisons (Ch10)
+- 06/15: Choosing Experiments (Ch11 and Ch12)
+- 06/22: Review and Reinforcement of previous classes
+- 06/29: **Final Presentation**
 
 ## Substitution Class
 
 In the case that any of the classes are cancelled for some unknown reason 
-(teacher being sick, Godzilla attacking Tsukuba), 06/23 will be used as a 
+(teacher being sick, Godzilla attacking Tsukuba), 06/22 will be used as a 
 replacement class. Otherwise, 06/23 will be used as a final review class 
 where the students can ask questions about the course contents and get
 help with their final presentations/reports
