@@ -1,0 +1,273 @@
+---
+title: "Experiment Design -- Case Studies"
+author: "Alex Tsukuba (99999999)"
+output: pdf_document
+---
+
+# Summary
+
+The four case studies below are examples of experiments that can be analysed by 
+the techniques that we have discussed in class. In each case, a description of the 
+experiment goals and methods, as well as a sample data set, is given. 
+
+Your task is to perform the analysis of the data set following the descriptions 
+and goals for the experiment. After performing the necessary calculations, present
+the results and draw appropriate conclusions.
+
+This file (completed for all four case studies) must be submitted as report 3 until 
+June 26th on MANABA. Please submit *both* the Rmd file, and the resulting PDF or HTML 
+file.
+
+## Activities
+
+Your analysis should follow the following simple pattern:
+
+1. Describe the experimental design required to answer the technical question of interest. 
+Detail the hypotheses being tested and the relevant design for testing those hypotheses.
+
+2. Perform the statistical analysis using the observations contained in the data file provided. This includes:
+      a. Perform the actual test of statistical significance;
+      b. Estimate the effect size (including the confidence interval);
+      c. Check the assumptions of your test;
+      d. Discuss the power of your test, **if relevant**
+      e. Describe your conclusions and recommendations. (what conclusions can we make? How can we improve the experiment?)
+
+\newpage
+# Case Study 1 -- Coin Counting
+
+## The experiment
+In a classroom we collected estimates from the students regarding the following two quantities:
+
+1. The total number of coins contained in a glass recipient A;
+2. The total monetary value contained in a glass recipient B;
+
+The collection of the first estimates (*regarding the number of coins in recipient A*) was made in a blind 
+fashion. In other words, each student made their estimate in writing, without interacting with the other students.
+
+After a while, the collection of the second estimates (*regarding the total value contained in recipient B*)
+was made in an open fashion. In other words, each student made an estimate out loud, sequentially.
+
+In this case study, we want to investigate whether this particular classroom is a good estimator of small 
+quantities of coins. Based on the data collected, we must try to answer the following two questions:
+
+1. How many coins are contained in recipient A?
+2. How much money is contained in recipient B?
+
+The data related to this experiment is located in two files: _01_coins_value.csv_ and _01_coins_amount.csv_. 
+
+## Data Analysis
+
+```{r, echo=FALSE}
+# For this exercise, it is hard to precisely define a hypothesis question, so let us first investigate the data:
+amount.coins <- read.csv("01_coins_amount.csv", header = FALSE)[, 1]
+total.value  <- read.csv("01_coins_value.csv", header = FALSE)[, 1] 
+
+# Exploratory data analysis
+library(car)
+par(mfrow = c(1, 2))
+plot(seq_along(total.value), total.value, 
+     type = "p", pch = 16, cex = 1.5,
+     main = "Guessed values, Total Value")
+abline(reg = lm(total.value ~ seq_along(total.value))) # regression line
+
+plot(seq_along(amount.coins), amount.coins, 
+     type = "p", pch = 16, cex = 1.5,
+     main = "Guessed values, Amount of Coins")
+abline(reg = lm(amount.coins~seq_along(amount.coins))) # regression line
+
+# Does the data follows a normal distribution?
+par(mfrow = c(2, 1))
+plot(density((total.value)), lwd = 2,
+     main = "Estimated PDF, Total Value")
+plot(density((amount.coins)), lwd = 2,
+     main = "Estimated PDF, Amount of Coins")
+
+par(mfrow = c(1, 2))
+qqPlot(total.value, pch = 16, cex = 1.5,
+       main = "QQ plot, Total Value")
+qqPlot(amount.coins, pch = 16, cex = 1.5,
+       main = "QQ plot, Amount of Coins")
+par(mfrow = c(1, 1))
+```
+
+Testing for Normality and independence of the data
+
+```{r, echo=FALSE}
+# Normality test
+shapiro.test(total.value)  # <-- pretty OK. 
+shapiro.test(amount.coins) # <-- pretty far from normal
+
+# Check sequential dependence in Total Value (where it may have an effect)
+summary(lm(total.value ~ seq_along(total.value)))
+durbinWatsonTest(lm(total.value ~ 1))
+```
+
+Calculating confidence intervals
+
+```{r, echo=FALSE}
+# Get a confidence interval for the mean of Total Value (under normality assumption)
+# (t.test provides it as a side effect, even if we're not actually testing any 
+# hypotheses)
+a <- t.test(total.value, conf.level = 0.95)
+a$conf.int
+
+# Get a confidence interval for the mean of Total Amount of Coins
+# In this case (non-normality) we have some options. Here I'll illustrate the 
+# bootstrap CI.
+
+library(boot)
+set.seed(12345)
+
+# Bootstrap
+my.boots <- boot(data      = amount.coins, 
+                 statistic = function(x, i){mean(x[i])}, 
+                 R         = 999)
+
+par(mfrow = c(2, 1))
+plot(density(my.boots$t), lwd = 2, 
+     main = "Estimated sampling distribution of means")
+qqPlot(my.boots$t, pch = 16, cex = 1.5,
+       main = "QQ plot, bootstrap means")
+par(mfrow = c(1, 1))
+
+# Bootstrap CI
+boot.ci(my.boots, conf = 0.95, type = "norm")
+```
+
+## Discussion about the results
+
+Discuss here what you learned from your analysis.
+
+\newpage
+# Case Study 2 -- Algorithm Analysis
+
+## The experiment
+A student was performed to compare two algorithms, _A_ and _B_, in regards to their speed when solving optimization
+problems.
+
+The student ran both algorithms 20 times on 7 representative problems in a benchmark, and collected the 
+running time of each execution. The student made sure that the order of the runs were randomized, and that as much 
+as possible the execution environment was similar.
+
+The results of this experiment are locates in the file _02_algorithm.csv_, and the student now wants to know 
+if there is any significant difference between the running times of both algorithms, of an order of at least 10 seconds. 
+
+## Data Analysis
+
+
+```{r, lmtest, echo=FALSE}
+# You can add the library you need in the preamble above. In this case, I've added the library "lmtest"
+
+# Experimental design
+delta_min <- 10        # Minimal change
+desired_beta <- 0.8    # Desired test power
+alpha <- 0.05          # Desired test confidence
+
+# Read data
+data<-read.table("02_algorithm.csv",
+                 header=T)
+# "Problem" is a categorical variable, not a continuous one - so we replace from numbers to factors:
+data$Problem<-as.factor(data$Problem)
+
+summary(data)
+
+boxplot(data$Time~data$Problem, main="Solving speed by problem", ylab = "speed", xlab = "Problem")
+```
+
+The performance of both algorithms seem to depend strongly on the problem, so we summarize the 
+measure times for each problem:algorithm combination.
+
+```{r, echo=FALSE}
+# We are more interested in the performance over each problem, so we summarize the repeated measues
+# on each Problem:Algorithm combination by their mean value
+aggdata<-aggregate(Time~Problem:Algorithm,
+                   data=data,
+                   FUN=mean)
+print(aggdata)
+```
+
+We are interested in testing whether there is a difference in performance between the two algorithms.
+In this case, we formulate our hypothesis over the size of the difference between the algorithms:
+
+$$\begin{cases} H_0: \mu_A - \mu_B = 0&\\H_1: \mu_A - \mu_B \neq 0\end{cases}$$
+And perform a paired T-test:
+
+```{r, echo=FALSE}
+# Perform paired t-test
+t.test(Time~Algorithm,
+       paired=T,
+       data=aggdata)
+```
+
+The result of the paired T-test allows us to reject the null hypothesis. Now we need to test
+the assumptions made by the T-test: Normality of the residuals and Independence 
+
+```{r,car,echo=FALSE}
+# Check for deviations of normality
+# 1: Normal QQplot
+
+difTimes<-with(aggdata,
+            Time[1:7]-Time[8:14])
+
+qqPlot(difTimes,
+       pch=16,
+       cex=1.5,
+       las=1)
+# Highlight the observed outlier
+indx<-which(difTimes==max(difTimes))
+pt<-qqnorm(difTimes,plot.it=F)
+points(pt$x[indx],pt$y[indx],pch=1,cex=2,col=2)
+
+# 2. Shapiro-Wilk test
+shapiro.test(difTimes)
+
+# Verify robustness of the conclusion to the removal of the outlier
+print(paste("P-value of the t-test without the outlier",t.test(difTimes[-indx])$p.value))
+print(paste("CI of the mean difference without the outlier",t.test(difTimes[-indx])$conf.int))
+```
+
+## Discussion about the results
+
+What can you conclude based on the observed results?
+
+\newpage
+# Case Study 3 -- Biodiversity
+
+## The Experiment^[Based on M.J. Crawley (2007), "The R Book", Ch. 8.]
+
+A field ecologist is interested in examining the effect of sewage disposal in the diversity of invertebrates normally found in rivers. She dispatches a team of graduate students to count how many different species can be found in 100-Liter samples of water from seven rivers that have untreated sewage disposal at some point in their course, from both 100m before and after the point where the sewage is disposed. For each river, 10 samples are collected (one each month, from february to november). The simulated data is available in the file _03_biodiversity.csv_.
+
+Based on the available sample, your task is to answer the following question: 
+
+\begin{center}\textit{
+Does the disposal of raw sewage in rivers affect the mean number of species?}\end{center}
+
+## Data Analysis
+
+## Discussion about the results
+
+\newpage
+# Case Study 4 -- Laboratory Compliance
+
+## The Experiment^[Adapted from Mason _et al._, _Statistical Design and Analysis of Experiments with Applications to Engineering and Science_, Wiley-Interscience 2003.]
+
+A ballistics laboratory is in the process of being certified for the evaluation of shielding technology. As part of this process, the laboratory must provide evidence that a certain callibration procedure produces results that are consistent with a reference equipment from the Department of Defence.
+
+The procedure in question consists of shooting a standardized steel cube against a 320mm-thick alluminum target and measuring the resulting hole area. From previous measurements under similar conditions, the standard deviations of the observations of this laboratory and of the Department of Defence can be roughly estimated as:
+
+- $\hat{\sigma}_{Lab}$: 5 mm^2^
+- $\hat{\sigma}_{DD}$: 10 mm^2^
+
+The certification authority demands that the mean hole area generated by this procedure in the lab be the same as the one from the reference equipment, and tolerates deviations no greater than 4 mm^2^. Since this certification is quite important for the laboratory, the engineer in charge of the process decides that he wants a significance level $\alpha = 0.01$ and a power of $(1-\beta) = 0.9$ for the smallest effect size of practical significance. 
+
+Your task is to answer the following question: 
+
+\begin{center}\textit{
+Is the mean hole size generated by the laboratory in conformity with\\
+the one generated by the reference equipment?}\end{center}
+
+The data related to this experiment is located in two files: _04_compliance.csv_.
+
+## Data Analysis
+
+## Discussion about the results

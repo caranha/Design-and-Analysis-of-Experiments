@@ -6,7 +6,7 @@
 % Specific definitions
 \title[]{Design and Analysis of Experiments}
 \subtitle[]{06 - Simple Comparisons}
-\author[]{Felipe Campelo\\{\footnotesize http://www.cpdee.ufmg.br/\textasciitilde fcampelo}}
+\author[]{Felipe Campelo\\{\footnotesize http://orcslab.cpdee.ufmg.br/}}
 \institute{Graduate Program in Electrical Engineering}
 \date{\scriptsize Belo Horizonte\\March 2015}
 
@@ -31,22 +31,27 @@
   \begin{frame}[b]
 		\frametitle{}
 \begin{columns}[T]
-\column{0.79\textwidth}
-\flushright{\small ``\textit{Science is simply common sense at its best,\\
-that is, rigidly accurate in observation,\\
-and merciless to fallacy in logic.}''\\\ \\
-Thomas H. Huxley\\
-1825-1895\\
-English biologist\\
+\column{0.7\textwidth}
+\flushright{\small ``\textit{If you get a million dollars for research it\\
+will be very helpful, of course;\\
+but what can really make a difference are\\
+the good ideas, recognizing those questions\\
+which are really important,\\
+which are yet to be answered. 
+}''\\
+\vspace{1em}
+Suzana Herculano-Houzel\\
+1972 --\\
+Brazilian neuroscientist\\
 }
-\column{0.21\textwidth}
+\column{0.3\textwidth}
 \begin{tikzpicture}[remember picture,overlay]
 \node[anchor=south east,yshift=26pt,xshift=0pt] at (current page.south east)
-{\includegraphics[width=\textwidth]{../figs/huxley.png}};
+{\includegraphics[width=\textwidth]{../figs/SuzanaHouzel.jpeg}};
 \end{tikzpicture}
 \end{columns}
 \vhalf
-\lfr{Image: \url{http://www.iep.utm.edu/huxley/}}
+\lfr{Image by Jorge Bispo: \url{https://goo.gl/KdqQkd}}
 \end{frame}
 
 %=====
@@ -163,7 +168,7 @@ H_1: \mu_1 - \mu_2 \neq 0
 t_0 = \frac{\left(\bar{y_1} - \bar{y_2}\right) - \cancelto{0}{\left(\mu_1 - \mu_2\right)}}{s_p\sqrt{\frac{1}{n_1} + \frac{1}{n_2}}} = \frac{\left(\bar{y_1} - \bar{y_2}\right)}{s_p\sqrt{\frac{1}{n_1} + \frac{1}{n_2}}}\sim t_{\left(n_1+n_2-2\right)}
 \eqs
 \vone 
-We'll reject $H_0$ at the $(1-\alpha)$ confidence level if $|t_0|\geq t_{\alpha/2; (n_1+n_2-2)}$
+We'll reject $H_0$ at the $(1-\alpha)$ confidence level if $|t_0|\geq t_{1-\alpha/2; (n_1+n_2-2)}$
 \end{ftst}
 
 %=====
@@ -441,35 +446,35 @@ One can at most test for serial autocorrelation in the residuals using Durbin-Wa
 
 %=====
 
-\begin{ftstf}
-{Comparison of two means}
-{Example: Length of steel rods}
-The assumptions of the test must be verified. In this particular case:
-
-\bitems Normality of the residuals;
-\item Equality of variance of the residuals;
-\item \alert{Independence of the residuals}.
-\eitem
-\begin{rcode}
-> library(lmtest)
-> with(y,
-+      dwtest(Length.error~Process))
-Durbin-Watson test
-data:  Length.error ~ Process
-DW = 2.2215, p-value = 0.6838
-alternative hypothesis: true autocorrelation 
-is greater than 0
-
-> plot(resid,
-+      pch=16,
-+      cex=1.5,
-+      type="b",
-+      las=1)
-\end{rcode}
-\begin{tikzpicture}[remember picture,overlay]
-\node[anchor=south east,yshift=-10pt,xshift=10pt] at (current page.south east) {\includegraphics[width=.45\textwidth]{../figs/steelrodsind.pdf}};
-\end{tikzpicture}
-\end{ftstf}
+%\begin{ftstf}
+%{Comparison of two means}
+%{Example: Length of steel rods}
+%The assumptions of the test must be verified. In this particular case:
+%
+%\bitems Normality of the residuals;
+%\item Equality of variance of the residuals;
+%\item \alert{Independence of the residuals}.
+%\eitem
+%\begin{rcode}
+%> library(lmtest)
+%> with(y,
+%+      dwtest(Length.error~Process))
+%Durbin-Watson test
+%data:  Length.error ~ Process
+%DW = 2.2215, p-value = 0.6838
+%alternative hypothesis: true autocorrelation 
+%is greater than 0
+%
+%> plot(resid,
+%+      pch=16,
+%+      cex=1.5,
+%+      type="b",
+%+      las=1)
+%\end{rcode}
+%\begin{tikzpicture}[remember picture,overlay]
+%\node[anchor=south east,yshift=-10pt,xshift=10pt] at (current page.south east) {\includegraphics[width=.45\textwidth]{../figs/steelrodsind.pdf}};
+%\end{tikzpicture}
+%\end{ftstf}
 
 %=====
 
